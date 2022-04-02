@@ -1,0 +1,29 @@
+/* FOOTER */
+
+footer{
+
+    grid-area: footer;
+}
+footer{
+align-items: center;
+justify-content: flex-end;
+
+    p.parrafo{
+    padding-right: 250px;
+    font-size: 1.4rem;
+    color: $textos;
+    }
+}
+@media screen and (max-width: 768px){
+        /* FOOTER */
+
+        footer{
+            justify-content: space-around;
+            grid-column: 1 / 9;
+    
+            p.parrafo{
+            padding: 0;
+            font-size: 1rem;
+            }
+        }
+    }

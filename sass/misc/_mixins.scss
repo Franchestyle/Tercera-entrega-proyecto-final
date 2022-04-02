@@ -1,0 +1,23 @@
+/* Helpers */
+
+.flex-row{
+    display: flex;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+
+}
+.container{
+    max-width:  1080px;
+    margin: 0 auto;
+}
+body{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 125px 600px 70px;
+    grid-template-areas: 
+    "emptyLeft header header header header header header emptyRight"
+    "emptyLeft bigSection bigSection bigSection bigSection bigSection bigSection emptyRight"
+    "emptyLeft footer footer footer footer footer footer emptyRight";
+}
