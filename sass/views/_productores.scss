@@ -1,9 +1,8 @@
 /* PRODUCTORES */
 
 section.productores{
-    background-color: var(--principal);
-    justify-content: space-between;
-    align-items: center;
+    background-color: $principal;
+    @include flex(row, space-between, center, 2rem);
     padding: 20px;
 
 
@@ -13,14 +12,6 @@ section.productores{
     }
     div.productores__seccionUno div.productores__seccionUno__texto{
         align-items: center;
-    }
-    div.productores__seccionUno .productorImgUno{
-        width: 300px;
-    }
-    div.productores__seccionUno div.productores__seccionUno__texto h2{
-        color: var(--textos);
-        font-family: var(--font-secondary);
-        font-size: 3rem;
     }
     div.productores__seccionUno div.productores__seccionUno__texto .parrafoProductores{
     color: var(--textos);
@@ -32,16 +23,29 @@ section.productores{
     div.productores__seccionDos div.productores__seccionDos__texto{
         align-items: center;
     }
-    div.productores__seccionDos .productorImgDos{
-        width: 300px;
-    }
-    div.productores__seccionDos div.productores__seccionDos__texto h2{
-        color: var(--textos);
-        font-family: var(--font-secondary);
-        font-size: 3rem;
-    }
     div.productores__seccionDos div.productores__seccionDos__texto .parrafoProductores{
         color: var(--textos);
         font-size: 1.5rem;
+    }
+}
+$images: (
+    productor-1: "productor-1",
+    productor-2: "productor-2"
+);
+@each $image, $value in productor-1, productor-2 {
+    .#{$image}{
+        width: 300px;
+    } 
+}
+
+$texth2: (
+    nombreProductor-1: "nombreProductor-1",
+    nombreProductor-2: "nombreProductor-2"
+);
+@each $texth2, $value in nombreProductor-1, nombreProductor-2 {
+    .#{$texth2}{
+        color: $textos;
+        font-family: $font-secondary;
+        font-size: 4rem;
     }
 }
