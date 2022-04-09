@@ -1,0 +1,32 @@
+/* CONTACTO */
+
+form{
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.form label{
+    color: var(--textos);
+    font-family: var(--font-primary);
+    font-size: 2rem;
+}
+.form__nombre{
+    padding: .8rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+.form__email{
+    padding: .8rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+.form__textarea{
+    padding: .8rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+ 

@@ -19,7 +19,7 @@ header{
     transition: border-color .3s ease-in-out
     }
      .menu__item:hover{
-    border: 2px solid $textos;
+    border-bottom: 2px solid $textos;
     }
 }
 .menu .menu__item .menu__link{
