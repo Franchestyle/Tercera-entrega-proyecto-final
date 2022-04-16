@@ -17,17 +17,17 @@ header{
         &__item{
             border: 2px solid $principal;
             transition: border-color .3s ease-in-out
-            
-            /* no me reconoce este simbolo & en &--active*/
+            }
             &--active{
             border-bottom: 2px solid $principal;
             }
-        }
-        &__item:hover{
+            &__item:hover{
             border-bottom: 2px solid $textos;
-        }
+            }
     }
 }
+
+
 .menu .menu__item .menu__link{
     font-size: var(--text-md);
     padding: 10px;

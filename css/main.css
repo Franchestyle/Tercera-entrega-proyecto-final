@@ -66,8 +66,9 @@ header {
     justify-content: space-between; }
     header .menu__item {
       border: 2px solid #161616;
-      transition: border-color 0.3s ease-in-out header .menu__item --active;
-        transition-border-bottom: 2px solid #161616; }
+      transition: border-color .3s ease-in-out; }
+    header .menu--active {
+      border-bottom: 2px solid #161616; }
     header .menu__item:hover {
       border-bottom: 2px solid #E5E5E5; }
 
@@ -155,32 +156,38 @@ picture#buttom {
 
 /* ESTUDIO */
 section.estudio {
-  background-color: var(--principal);
+  background-color: #161616;
   justify-content: space-around;
   padding: 20px; }
   section.estudio div.estudioUno {
     align-items: center; }
-  section.estudio div.estudioUno h2 {
-    color: var(--textos);
-    font-family: var(--font-secondary);
-    font-size: 3.5rem; }
-  section.estudio div.estudioUno p.parrafoEstudio {
-    color: var(--textos);
-    font-size: 2rem; }
-  section.estudio div.estudioUno img.estudio {
-    width: 300px; }
   section.estudio div.estudioDos {
     flex-direction: row-reverse;
     align-items: center; }
-  section.estudio div.estudioDos h2 {
-    color: var(--textos);
-    font-family: var(--font-secondary);
-    font-size: 3.5rem; }
-  section.estudio div.estudioDos p.parrafoEstudio {
-    color: var(--textos);
-    font-size: 2rem; }
-  section.estudio div.estudioDos img.estudio {
-    width: 300px; }
+
+.estudio-1 {
+  width: 300px; }
+
+.estudio-2 {
+  width: 300px; }
+
+.nombreEstudio-1 {
+  color: #E5E5E5;
+  font-family: "Roboto", sans-serif;
+  font-size: 3.5rem; }
+
+.nombreEstudio-2 {
+  color: #E5E5E5;
+  font-family: "Roboto", sans-serif;
+  font-size: 3.5rem; }
+
+.parrafoEstudio-1 {
+  color: #E5E5E5;
+  font-size: 2rem; }
+
+.parrafoEstudio-2 {
+  color: #E5E5E5;
+  font-size: 2rem; }
 
 /* PRODUCTORES */
 section.productores {
@@ -195,16 +202,10 @@ section.productores {
     align-items: center; }
   section.productores div.productores__seccionUno div.productores__seccionUno__texto {
     align-items: center; }
-  section.productores div.productores__seccionUno div.productores__seccionUno__texto .parrafoProductores {
-    color: var(--textos);
-    font-size: 1.5rem; }
   section.productores div.productores__seccionDos {
     align-items: center; }
   section.productores div.productores__seccionDos div.productores__seccionDos__texto {
     align-items: center; }
-  section.productores div.productores__seccionDos div.productores__seccionDos__texto .parrafoProductores {
-    color: var(--textos);
-    font-size: 1.5rem; }
 
 .productor-1 {
   width: 300px; }
@@ -222,6 +223,14 @@ section.productores {
   font-family: "Roboto", sans-serif;
   font-size: 4rem; }
 
+.parrafoProductor-1 {
+  color: #E5E5E5;
+  font-size: 1.5rem; }
+
+.parrafoProductor-2 {
+  color: #E5E5E5;
+  font-size: 1.5rem; }
+
 /* CONTACTO */
 form {
   justify-content: center;
@@ -229,8 +238,8 @@ form {
   gap: 1rem; }
 
 .form label {
-  color: var(--textos);
-  font-family: var(--font-primary);
+  color: #E5E5E5;
+  font-family: "Shippori Antique B1", sans-serif;
   font-size: 2rem; }
 
 .form__nombre {

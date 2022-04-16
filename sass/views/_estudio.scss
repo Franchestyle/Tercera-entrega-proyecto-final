@@ -1,7 +1,7 @@
 /* ESTUDIO */
 
 section.estudio{
-    background-color: var(--principal);
+    background-color: $principal;
     justify-content: space-around;
     padding: 20px;
 
@@ -10,33 +10,42 @@ section.estudio{
     align-items: center;
     }
 
-    div.estudioUno h2{  
-        color: var(--textos);
-        font-family: var(--font-secondary);
-        font-size: 3.5rem;
-    }
-    div.estudioUno p.parrafoEstudio{    
-        color: var(--textos);
-        font-size: 2rem;
-    } 
-    div.estudioUno img.estudio{
-        width: 300px;
-    }
     div.estudioDos{
     flex-direction: row-reverse;
     align-items: center;
     }
-    div.estudioDos h2{
-        color: var(--textos);
-        font-family: var(--font-secondary);
+
+}
+
+$images: (
+    estudio-1: "estudio-1",
+    estudio-2: "estudio-2"
+);
+@each $image, $value in estudio-1, estudio-2 {
+    .#{$image}{
+        width: 300px;
+    } 
+}
+
+$texth2E: (
+    nombreEstudio-1: "nombreEstudio-1",
+    nombreEstudio-2: "nombreEstudio-2"
+);
+@each $texth2E, $value in nombreEstudio-1, nombreEstudio-2 {
+    .#{$texth2E}{
+        color: $textos;
+        font-family: $font-secondary;
         font-size: 3.5rem;
     }
-    div.estudioDos p.parrafoEstudio{
-        color: var(--textos);
+}
+
+$textpE: (
+    parrafoEstudio-1: "parrafoEstudio-1",
+    parrafoEstudio-2: "parrafoEstudio-2"
+);
+@each $textpE, $value in parrafoEstudio-1, parrafoEstudio-2 {
+    .#{$textpE}{
+        color: $textos;
         font-size: 2rem;
-    
-    }
-    div.estudioDos img.estudio{
-        width: 300px;
     }
 }

@@ -6,8 +6,8 @@ form{
     gap: 1rem;
 }
 .form label{
-    color: var(--textos);
-    font-family: var(--font-primary);
+    color: $textos;
+    font-family: $font-primary;
     font-size: 2rem;
 }
 .form__nombre{

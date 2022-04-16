@@ -13,19 +13,12 @@ section.productores{
     div.productores__seccionUno div.productores__seccionUno__texto{
         align-items: center;
     }
-    div.productores__seccionUno div.productores__seccionUno__texto .parrafoProductores{
-    color: var(--textos);
-    font-size: 1.5rem;
-    }
+
     div.productores__seccionDos{
         align-items: center;
     }
     div.productores__seccionDos div.productores__seccionDos__texto{
         align-items: center;
-    }
-    div.productores__seccionDos div.productores__seccionDos__texto .parrafoProductores{
-        color: var(--textos);
-        font-size: 1.5rem;
     }
 }
 $images: (
@@ -47,5 +40,16 @@ $texth2: (
         color: $textos;
         font-family: $font-secondary;
         font-size: 4rem;
+    }
+}
+
+$textp: (
+    parrafoProductor-1: "parrafoProductor-1",
+    parrafoProductor-2: "parrafoProductor-2"
+);
+@each $textp, $value in parrafoProductor-1, parrafoProductor-2 {
+    .#{$textp}{
+        color: $textos;
+        font-size: 1.5rem;
     }
 }
