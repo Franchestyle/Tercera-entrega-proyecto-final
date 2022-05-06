@@ -29,4 +29,66 @@ form{
     outline: none;
     border: none;
 }
- 
+
+.menu-icon img{
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+}
+
+.checkbtn, #check{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .menu{
+        display: none;
+    }
+
+    .form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .checkbtn{
+        display: block;
+    }
+
+    .menu-icon{
+        height: 70px;
+        width: 70px;
+        display: block;
+        position: fixed;
+        top: 30px;
+        right: 20px;
+
+        img{
+            height: 70px;
+            width: 70px;
+        }
+    }
+
+    ul.menu{
+        background-color: $principal;
+        display: block;
+        position: fixed;
+        top: 100px;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+    }
+    li.menu__item{
+        background-color: $principal;
+        font-size: 2rem;
+        padding: 3rem;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+
+    }
+}

@@ -49,3 +49,109 @@ $textpE: (
         font-size: 2rem;
     }
 }
+
+.menu-icon img{
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+}
+
+.checkbtn, #check{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .menu{
+        display: none;
+    }
+
+    section.estudio{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; 
+
+            div.estudioUno{
+                flex-direction: column;
+                align-items: center;
+            }
+            div.estudioDos{
+                flex-direction: column;
+                align-items: center;
+            }
+            
+        }
+
+        $images: (
+            estudio-1: "estudio-1",
+            estudio-2: "estudio-2"
+        );
+        @each $image, $value in estudio-1, estudio-2 {
+            .#{$image}{
+                width: 200px;
+            } 
+        }
+        
+        $texth2E: (
+            nombreEstudio-1: "nombreEstudio-1",
+            nombreEstudio-2: "nombreEstudio-2"
+        );
+        @each $texth2E, $value in nombreEstudio-1, nombreEstudio-2 {
+            .#{$texth2E}{
+                color: $textos;
+                font-family: $font-secondary;
+                font-size: 2.5rem;
+            }
+        }
+        
+        $textpE: (
+            parrafoEstudio-1: "parrafoEstudio-1",
+            parrafoEstudio-2: "parrafoEstudio-2"
+        );
+        @each $textpE, $value in parrafoEstudio-1, parrafoEstudio-2 {
+            .#{$textpE}{
+                color: $textos;
+                font-size: 1.5rem;
+            }
+        }
+        .checkbtn{
+            display: block;
+        }
+
+        .menu-icon{
+            height: 70px;
+            width: 70px;
+            display: block;
+            position: fixed;
+            top: 30px;
+            right: 20px;
+
+            img{
+                height: 70px;
+                width: 70px;
+            }
+        }
+    
+        ul.menu{
+            background-color: $principal;
+            display: block;
+            position: fixed;
+            top: 100px;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            right: 0;
+        }
+        li.menu__item{
+            background-color: $principal;
+            font-size: 2rem;
+            padding: 3rem;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        #check:checked ~ ul{
+            left: 0;
+
+        }
+}

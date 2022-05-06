@@ -53,3 +53,96 @@ $textp: (
         font-size: 1.5rem;
     }
 }
+.menu-icon img{
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+}
+
+.checkbtn, #check{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .menu{
+        display: none;
+    }
+
+    section.productores{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    $images: (
+        productor-1: "productor-1",
+        productor-2: "productor-2"
+    );
+    @each $image, $value in productor-1, productor-2 {
+        .#{$image}{
+            width: 200px;
+        } 
+    }
+    
+    $texth2: (
+        nombreProductor-1: "nombreProductor-1",
+        nombreProductor-2: "nombreProductor-2"
+    );
+    @each $texth2, $value in nombreProductor-1, nombreProductor-2 {
+        .#{$texth2}{
+            color: $textos;
+            font-family: $font-secondary;
+            font-size: 2.5rem;
+        }
+    }
+    
+    $textp: (
+        parrafoProductor-1: "parrafoProductor-1",
+        parrafoProductor-2: "parrafoProductor-2"
+    );
+    @each $textp, $value in parrafoProductor-1, parrafoProductor-2 {
+        .#{$textp}{
+            color: $textos;
+            font-size: 1rem;
+        }
+    }
+    .checkbtn{
+        display: block;
+    }
+
+    .menu-icon{
+        height: 70px;
+        width: 70px;
+        display: block;
+        position: fixed;
+        top: 30px;
+        right: 20px;
+
+        img{
+            height: 70px;
+            width: 70px;
+        }
+    }
+
+    ul.menu{
+        background-color: $principal;
+        display: block;
+        position: fixed;
+        top: 100px;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+    }
+    li.menu__item{
+        background-color: $principal;
+        font-size: 2rem;
+        padding: 3rem;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+
+    }
+}
